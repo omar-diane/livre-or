@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/*BARRE DE NAVIGATION*/
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    top: 0;
+    box-shadow: 10px 5px 5px black;
+}
+
+nav h1 {
+    font-size: 20px;
+}
+
+nav .onglets {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav .onglets p {
+    font-size: 17px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+nav .onglets a {
+    text-decoration: none;
+    color: black;
+}
+
+nav .onglets input {
+    margin: 0px 20px;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: lavender;
+}
+
+header img {
+    width: 100%;
+}
+/*DEBUT DE LA SECTION*/
+section {
+    background-color: gainsboro;
+}
+
+section .left {
+    max-width: 50%;
+    margin-left: 10px;
+}
+/*FOOTER*/
+footer {
+    background: black;
+    padding: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    -webkit-transition: color 1s;
+    transition: color 1s;
+    float: right;
+}
+
+footer a:hover {
+    color: #d2483c;
+}
+
+footer table {
+    margin-left: 20px;
+}
+
+footer table .menu-footer {
+    color: white;
+    text-align: center;
+}
+
+footer table .menu-footer a {
+    font-size: 20px;
+}
+
+/*PAGE D'INSCRIPTION*/
+
