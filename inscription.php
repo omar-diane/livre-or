@@ -56,9 +56,11 @@ session_start();
                     //On créé la requête
                     $sql = "INSERT INTO utilisateurs( login, password) VALUES ('$login','$password')";
                     $req=mysqli_query($conn,$sql);
-                }
+                } 
                 else echo "Les mots de passe ne sont pas identiques";
+                header ('location:connexion.php');
         }
+
     }
     ?>
     <main>
