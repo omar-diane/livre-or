@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,17 +37,30 @@ session_start();
     if($conn === false){
         die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
     }
+    $utilcheck=0;
+    $admin=0;
     
     if(!empty($_POST['login']) and !empty($_POST['password'])){
-
+    
         $login = $_POST['login'];
     
-        $sql = "SELECT login, password, FROM utilisateurs WHERE login = '$login' ";
+        $sql = "SELECT login, password, id FROM utilisateurs WHERE login = '$login' ";
         $query = $conn->query($sql) ;
         $res = mysqli_fetch_row($query);
         
+        if($_POST['login'] === $res[0] and $_POST['login'] !== 'admin' ){
+            $utilcheck++;
+        } elseif ( $_POST['login'] === 'admin' ){
+            $admin++;
+        }
+        if($_POST['password'] === $res[1] and $_POST['password']){
+            $utilcheck++;
+        }
+        if($utilcheck === 2){
+            $_SESSION['connected']=$res[2];
         header('Location: profil.php');
-        }  
+        }
+    }  
 
     ?>
     <main>
