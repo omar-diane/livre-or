@@ -48,12 +48,12 @@ header img {
 }
 /*DEBUT DE LA SECTION*/
 section {
-    background-color: gainsboro;
+    background-color: rgb(255, 255, 255);
 }
 
 section .left {
     max-width: 50%;
-    margin-left: 10px;
+    margin-left: 40px;
 }
 /*FOOTER*/
 footer {

@@ -37,6 +37,10 @@ session_start();
  }
  if(isset($_POST['commentaire']))
  
+   $sql = "INSERT INTO `commentaires` (`commentaire`, `id_utilisateur`, `date`) VALUES('$comment', '$id_user', '$date')";
+   $req = mysqli_query($conn,$sql);
+   
+ 
 ?>
     <main>
         <form action="" method="post">
