@@ -51,14 +51,14 @@
         <a href="#">Github</a>
         <table>
     <tbody>
-        <tr class="menu-footer">
+        <tr>
             <td><a href="#">ACCUEIL</a></td>
         </tr>
-        <tr class="menu-footer">
-            <td><a href="connexion.php">CONNEXION</a></td>
-        </tr>
-        <tr class="menu-footer">
+        <tr>
             <td><a href="inscription.php">INSCRIPTION</a></td>
+        </tr>
+        <tr>
+            <td><a href="connexion.php">CONNEXION</a></td>
         </tr>
     </tbody>
 </table>

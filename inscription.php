@@ -16,8 +16,8 @@ session_start();
         <nav>
             <h1 class="logo">LOREM</h1>
             <div class="onglets">
-                <p><a href="#">Accueil</a></p>
-                <p><a href="inscription.php">Inscription</a></p>
+                <p><a href="index.php">Accueil</a></p>
+                <p><a href="#">Inscription</a></p>
                 <p><a href="connexion.php">Connexion</a></p>
             </div>
         </nav>
@@ -66,9 +66,9 @@ session_start();
     <main>
         <form class="box" action="" method="post">
             <h1 class="box-title">INSCRIPTION</h1>
-            <input type="text" name="login" placeholder="Login">
-            <input type="password" name="password" placeholder="Mot de passe">
-            <input type="password" name="pass_conf" placeholder="Confirmaion de mot de passe">
+            <input type="text" class="box-input" name="login" placeholder="Login">
+            <input type="password" class="box-input" name="password" placeholder="Mot de passe">
+            <input type="password" class="box-input" name="pass_conf" placeholder="Confirmaion de mot de passe">
             <input type="submit" name="submit" value="S'inscrire" class="box-button">
         </form>
     </main>

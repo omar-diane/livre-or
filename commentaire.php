@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -35,51 +36,15 @@ session_start();
  if($conn === false){
      die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
  }
- 
- if(isset($_POST['comments'])){
-     $comments = ($_POST['comments']);
-     $comments = n12br($comments);
-
-     $sql = ("INSERT INTO 'commentaires' WHERE commentaire VALUES( '','" . $comments ."')");
- }
-
- $nombresDeCommentsParPage = 20;
- $retour = mysqli_query('SELECT COUNT(*)AS nb_comments FROM commentaires');
- $data = mysqli_fetch_array($retour);
- $totalDesComments = $data['nb_comments'];
- $nombreDePages = ceil($totalDesComments/$nombresDeCommentsParPage);
- echo 'Page :';
- for ($i = 1; $i<=$nombreDePages; $i++){
-    echo '<a href="livre-or.php?page=' . $i . '">' . $i . '</a> ';
- }  
- 
 ?>
 
-<?php
-
-if(isset($_GET['page'])){
-    $page = $_GET['page'];
-} else {
-    $page = 1;
-}
-
-$premierCommentsAafficher = ($page - 1) * $nombresDeCommentsParPage;
-
-$reponse = mysqli_query('SELECT * FROM commentaires ORDER BY id DESC LIMIT ' . $premierCommentsAafficher . ', ' . $nombreDeCommentsParPage);
-
-while ($data = mysqli_fetch_array($reponse)){
-    echo $data['comments'];
-    mysqli_close();
-}
-?>
     <main>
-        <form action="" method="post">
+    <form action="" method="post">
      
     <textarea id="commentaire" name="commentaire" cols="50" rows="7"></textarea><br>
      
     <input type="submit" value="Envoyer le commentaire">
         </form>
     </main>
-    
 </body>
 </html>

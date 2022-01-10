@@ -16,9 +16,9 @@ session_start();
         <nav>
             <h1 class="logo">LOREM</h1>
             <div class="onglets">
-                <p><a href="#">Accueil</a></p>
+                <p><a href="index.php">Accueil</a></p>
                 <p><a href="inscription.php">Inscription</a></p>
-                <p><a href="connexion.php">Connexion</a></p>
+                <p><a href="#">Connexion</a></p>
             </div>
         </nav>
     </header>
@@ -37,23 +37,43 @@ session_start();
     if($conn === false){
         die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
     }
-    $_SESSION["connected"];
-    foreach($users as $user){
-        if ( isset($_POST["login"]) && $_POST["login"] == $user[1] && password_verify($_POST['password'],$user[2]) == true){
-            $_SESSION["connected"] = $_POST["login"] ;
-            header("Location:index.php");
-        }
-        if ( isset($_POST["login"]) && $_POST["login"] == $user[1] && $_POST['password'] == $user[2]){
-            $_SESSION["connected"] = $_POST["login"] ;
-            header("Location:index.php");
-        }
+    
+    $utilcheck=0;
+$admin=0;
+
+if(!empty($_POST['login']) and !empty($_POST['password'])){
+
+    $login = $_POST['login'];
+
+    $sql = "SELECT login, password, id FROM utilisateurs WHERE login = '$login' ";
+    $query = $conn->query($sql) ;
+    $res = mysqli_fetch_row($query);
+    
+    if($_POST['login'] === $res[0] and $_POST['login'] !== 'admin' ){
+        $utilcheck++;
+    } elseif ( $_POST['login'] === 'admin' ){
+        $admin++;
     }
+    if($_POST['password'] === $res[1] and $_POST['password'] !== 'admin'){
+        $utilcheck++;
+    } elseif ( $_POST['password'] === 'admin' ){
+        $admin++;
+    }
+    if($utilcheck === 2){
+        $_SESSION['connected']=$res[2];
+    header('Location: profil.php');
+    } elseif ($admin === 2){
+        $_SESSION['adconnected']= $_POST['login'];
+        header('Location: admin.php');
+    }
+} 
     ?>
     <main>
-        <form action="" method="post">
-            <input type="text" name="login" placeholder="Login">
-            <input type="password" name="password" placeholder="Mot de passe">
-            <input type="submit" name="submit" value="Se connecter">
+        <form class="box" action="" method="post">
+            <h1 class="box-title">CONNEXION</h1>
+            <input type="text" class="box-input" name="login" placeholder="Login">
+            <input type="password" class="box-input" name="password" placeholder="Mot de passe">
+            <input type="submit" class="box-button" name="submit" value="Se connecter">
         </form>
     </main>
 </body>
