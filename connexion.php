@@ -38,8 +38,7 @@ session_start();
         die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
     }
     
-    $utilcheck=0;
-$admin=0;
+$utilcheck=0;
 
 if(!empty($_POST['login']) and !empty($_POST['password'])){
 
@@ -49,25 +48,22 @@ if(!empty($_POST['login']) and !empty($_POST['password'])){
     $query = $conn->query($sql) ;
     $res = mysqli_fetch_row($query);
     
-    if($_POST['login'] === $res[0] and $_POST['login'] !== 'admin' ){
+    if($_POST['login'] === $res[0] and $_POST['login']){
         $utilcheck++;
-    } elseif ( $_POST['login'] === 'admin' ){
-        $admin++;
-    }
-    if($_POST['password'] === $res[1] and $_POST['password'] !== 'admin'){
+    } else {
+        echo 'Login incorrect';
+    } 
+    if($_POST['password'] === $res[1] and $_POST['password']){
         $utilcheck++;
-    } elseif ( $_POST['password'] === 'admin' ){
-        $admin++;
+    } else {
+        echo 'Mot de passe incorrecte';
     }
     if($utilcheck === 2){
         $_SESSION['connected']=$res[2];
     header('Location: profil.php');
-    } elseif ($admin === 2){
-        $_SESSION['adconnected']= $_POST['login'];
-        header('Location: admin.php');
     }
-} 
-    ?>
+}
+?>
     <main>
         <form class="box" action="" method="post">
             <h1 class="box-title">CONNEXION</h1>

@@ -13,9 +13,8 @@
             <h1 class="logo">LOREM</h1>
             <div class="onglets">
                 <p><a href="#">Accueil</a></p>
-                <p><a href="inscription.php">Inscription</a></p>
-                <p><a href="connexion.php">Connexion</a></p>
-            </div>
+                <?php include "header.php"; ?>
+            </div> 
         </nav>
     </header>
     <main>
@@ -48,11 +47,11 @@
         </section>
     </main>
     <footer>
-        <a href="#">Github</a>
+        <a href="https://github.com/omar-diane/livre-or">Github</a>
         <table>
     <tbody>
         <tr>
-            <td><a href="#">ACCUEIL</a></td>
+            <td><a href="index.php">ACCUEIL</a></td>
         </tr>
         <tr>
             <td><a href="inscription.php">INSCRIPTION</a></td>

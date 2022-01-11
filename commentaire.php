@@ -16,7 +16,7 @@ session_start();
         <nav>
             <h1 class="logo">LOREM</h1>
             <div class="onglets">
-                <p><a href="#">Accueil</a></p>
+                <p><a href="index.php">Accueil</a></p>
                 <p><a href="inscription.php">Inscription</a></p>
                 <p><a href="connexion.php">Connexion</a></p>
             </div>
@@ -39,10 +39,9 @@ session_start();
 ?>
 
     <main>
-    <form action="" method="post">
-     
+    <form class="comments" action="" method="post">
+     <h3>Laisse un commentaire</h3>
     <textarea id="commentaire" name="commentaire" cols="50" rows="7"></textarea><br>
-     
     <input type="submit" value="Envoyer le commentaire">
         </form>
     </main>

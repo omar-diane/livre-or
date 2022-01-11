@@ -29,6 +29,10 @@ nav .onglets p {
     cursor: pointer;
 }
 
+nav .onglets p:hover {
+    text-decoration: underline;
+}
+
 nav .onglets a {
     text-decoration: none;
     color: black;
@@ -76,7 +80,7 @@ footer a:hover {
 
 /*PAGE D'INSCRIPTION ET CONNEXION*/
 body {
-    background-color: black;
+    background-color: white;
 }
 
 .box .box-title {
@@ -114,4 +118,10 @@ body {
     color: cornflowerblue;
     border: 0;
     outline:0;
+  }
+
+  /* PAGE COMMENTAIRE*/
+  .comments h3 {
+      color: black;
+      margin-left: 10px;
   }
