@@ -17,8 +17,8 @@ session_start();
             <h1 class="logo">LOREM</h1>
             <div class="onglets">
                 <p><a href="index.php">Accueil</a></p>
-                <p><a href="#">Inscription</a></p>
                 <p><a href="connexion.php">Connexion</a></p>
+                <p><a href="inscription.php">Inscription</a></p>
             </div>
         </nav>
     </header>
@@ -47,7 +47,7 @@ session_start();
                 /* on test si les deux mdp sont bien identique */
                 if ($_POST['password']===$_POST['pass_conf'])
                 {
-                    // On crypte le mot de passe
+                    
                     $password=($_POST['password']);
 
                     // On récupère nos valeurs
