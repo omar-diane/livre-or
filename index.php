@@ -19,30 +19,13 @@
     </header>
     <main>
         <header>
-        <img src="images/aurore-bor-1.jpg" alt="">
+            <img src="" alt="">
         </header>
         <section>
             <div class="left">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                </p>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                </p>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta enim excepturi, dolorum natus nesciunt tempora laborum aliquid culpa, est obcaecati ullam minima tempore reprehenderit harum provident pariatur reiciendis magnam.
-                </p>
+                <img src="images/Ornamental.jpg" alt="">
+                <img src="images/Ornamental.jpg" alt="">
+                <img src="images/Ornamental.jpg" alt="">
             </div>
         </section>
     </main>

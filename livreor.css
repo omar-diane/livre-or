@@ -46,29 +46,29 @@ nav .onglets input {
     outline: none;
     background-color: lavender;
 }
-
-header img {
-    width: 100%;
-}
 /*DEBUT DE LA SECTION*/
 
 section .left {
-    max-width: 50%;
-    margin-left: 40px;
+    
+    display: flex;
+    justify-content: space-between;
 }
 
-section .left p {
-    color: white;
+section .left img {
+    display: block;
+    margin: 0px auto;
+    width: 15%;
 }
 /*FOOTER*/
 footer {
-    background: white;
-    padding: 40px;
+    background: black;
+    position: absolute;
+    bottom: 0;
 }
 
 footer a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 20px;
     margin-right: 10px;
     float: right;
