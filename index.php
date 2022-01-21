@@ -18,11 +18,11 @@
         </nav>
     </header>
     <main>
-        <header>
-            <img src="" alt="">
-        </header>
         <section>
-            <div class="left">
+            <div class="right">
+                <img src="images/Ornamental.jpg" alt="">
+            </div>
+            <div class="cards">
                 <img src="images/Ornamental.jpg" alt="">
                 <img src="images/Ornamental.jpg" alt="">
                 <img src="images/Ornamental.jpg" alt="">
@@ -32,18 +32,12 @@
     <footer>
         <a href="https://github.com/omar-diane/livre-or">Github</a>
         <table>
-    <tbody>
-        <tr>
-            <td><a href="index.php">ACCUEIL</a></td>
-        </tr>
-        <tr>
-            <td><a href="inscription.php">INSCRIPTION</a></td>
-        </tr>
-        <tr>
-            <td><a href="connexion.php">CONNEXION</a></td>
-        </tr>
-    </tbody>
-</table>
+            <tr>
+                <td><a href="index.php">ACCUEIL</a></td>
+                <td><a href="connexion.php">CONNEXION</a></td>
+                <td><a href="inscription.php">INSCRIPTION</a></td>
+            </tr>
+        </table>
     </footer>
 </body>
 </html>

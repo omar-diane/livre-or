@@ -23,6 +23,7 @@ session_start();
         </nav>
     </header>
     <?php
+
  define('DB_SERVER', 'localhost');
  define('DB_USERNAME', 'root');
  define('DB_PASSWORD', '');
@@ -36,13 +37,24 @@ session_start();
  if($conn === false){
      die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
  }
+
+ if(!empty($_POST['commentaire'])){
+     if(isset($_POST['submit'])){
+     $commentaire = $_POST['commentaire'];
+
+     $sql = "INSERT INTO commentaires (commentaire, id_utilisateur, date) VALUES ('$commentaire', '', NOW())";
+     $req = mysqli_query($conn,$sql);
+ } else {
+     echo'Champ commentaire pas rempli';
+ } 
+ }
 ?>
 
     <main>
     <form class="comments" action="" method="post">
      <h3>Laisse un commentaire</h3>
     <textarea id="commentaire" name="commentaire" cols="50" rows="7"></textarea><br>
-    <input type="submit" value="Envoyer le commentaire">
+    <input type="submit" name="submit" value="Envoyer le commentaire">
         </form>
     </main>
 </body>

@@ -17,8 +17,8 @@ session_start();
             <h1 class="logo">LOREM</h1>
             <div class="onglets">
                 <p><a href="index.php">Accueil</a></p>
+                <p><a href="connexion.php">Connexion</a></p>
                 <p><a href="inscription.php">Inscription</a></p>
-                <p><a href="#">Connexion</a></p>
             </div>
         </nav>
     </header>
