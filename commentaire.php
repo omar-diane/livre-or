@@ -38,16 +38,18 @@ session_start();
      die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
  }
 
- if(!empty($_POST['commentaire'])){
+ if(isset($_POST['commentaire'])){
      if(isset($_POST['submit'])){
-     $commentaire = $_POST['commentaire'];
+     $commentaire = mysqli_real_escape_string($conn,(htmlspecialchars($_POST['commentaire'])));
+     $commentaire = nl2br($commentaire);
 
-     $sql = "INSERT INTO commentaires (commentaire, id_utilisateur, date) VALUES ('$commentaire', '', NOW())";
-     $req = mysqli_query($conn,$sql);
- } else {
-     echo'Champ commentaire pas rempli';
- } 
+     $id_utilcheck = (int) $_SESSION['connected'];
+     $date = date("Y-m-d H:i:s");
+
+     $sql = "INSERT INTO commentaires(commentaire, id_utilisateurs, date) VALUES ('$commentaire', '$id_utilcheck', '$date')";
+     $req=mysqli_query($conn,$sql);
  }
+}
 ?>
 
     <main>

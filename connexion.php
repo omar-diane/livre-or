@@ -48,18 +48,19 @@ if(!empty($_POST['login']) and !empty($_POST['password'])){
     $query = $conn->query($sql) ;
     $res = mysqli_fetch_row($query);
     
-    if($_POST['login'] === $res[0] and $_POST['login']){
+    if($_POST['login'] === $res[0]){
         $utilcheck++;
     } else {
         echo 'Login incorrect';
     } 
-    if($_POST['password'] === $res[1] and $_POST['password']){
+    if($_POST['password'] === $res[1]){
         $utilcheck++;
     } else {
         echo 'Mot de passe incorrecte';
     }
     if($utilcheck === 2){
         $_SESSION['connected']=$res[2];
+        $id_utilcheck = $_SESSION['connected'];
     header('Location: profil.php');
     }
 }
