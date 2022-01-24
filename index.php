@@ -8,25 +8,20 @@
     <link rel="stylesheet" href="livreor.css">
 </head>
 <body>
-<header class="haut-de-page">
+<header class="main-head">
         <nav>
-            <h1 class="logo">LOREM</h1>
-            <div class="onglets">
-                <p><a href="#">Accueil</a></p>
-                <?php include "header.php"; ?>
-            </div> 
+            <h1 id="logo">LOREM</h1>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="connexion.php">Connexion</a></li>
+                <li><a href="inscription.php">Inscription</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <div class="right">
-                <img src="images/Ornamental.jpg" alt="">
-            </div>
-            <div class="cards">
-                <img src="images/Ornamental.jpg" alt="">
-                <img src="images/Ornamental.jpg" alt="">
-                <img src="images/Ornamental.jpg" alt="">
-            </div>
+        <section class="hero">
+            <h2>Welcome To China</h2>
+            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error esse quod commodi nemo sequi! Praesentium quae velit unde itaque dolorem iure! Aperiam fugiat dignissimos reprehenderit sunt provident perspiciatis autem ducimus!</h3>
         </section>
     </main>
     <footer>

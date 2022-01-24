@@ -12,14 +12,14 @@ session_start();
     <link rel="stylesheet" href="livreor.css">
 </head>
 <body>
-<header class="haut-de-page">
+<header class="main-head">
         <nav>
-            <h1 class="logo">LOREM</h1>
-            <div class="onglets">
-                <p><a href="index.php">Accueil</a></p>
-                <p><a href="connexion.php">Connexion</a></p>
-                <p><a href="inscription.php">Inscription</a></p>
-            </div>
+            <h1 id="logo">LOREM</h1>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="connexion.php">Connexion</a></li>
+                <li><a href="#">Inscription</a></li>
+            </ul>
         </nav>
     </header>
 
