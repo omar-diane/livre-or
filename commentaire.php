@@ -12,14 +12,13 @@ session_start();
     <link rel="stylesheet" href="livreor.css">
 </head>
 <body>
-<header class="haut-de-page">
+<header class="main-head">
         <nav>
-            <h1 class="logo">LOREM</h1>
-            <div class="onglets">
-                <p><a href="index.php">Accueil</a></p>
-                <p><a href="inscription.php">Inscription</a></p>
-                <p><a href="connexion.php">Connexion</a></p>
-            </div>
+            <h1 id="logo">LOREM</h1>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <?php include "header.php"; ?>
+            </ul>
         </nav>
     </header>
     <?php
@@ -48,8 +47,9 @@ session_start();
 
      $sql = "INSERT INTO commentaires(commentaire, id_utilisateurs, date) VALUES ('$commentaire', '$id_utilcheck', '$date')";
      $req=mysqli_query($conn,$sql);
- }
-}
+     }
+    }
+
 ?>
 
     <main>

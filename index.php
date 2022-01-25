@@ -13,8 +13,7 @@
             <h1 id="logo">LOREM</h1>
             <ul>
                 <li><a href="#">Accueil</a></li>
-                <li><a href="connexion.php">Connexion</a></li>
-                <li><a href="inscription.php">Inscription</a></li>
+                <?php include "header.php"; ?>
             </ul>
         </nav>
     </header>

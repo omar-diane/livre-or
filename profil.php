@@ -13,13 +13,13 @@ session_start();
     <link rel="stylesheet" href="livreor.css">
 </head>
 <body>
-<header class="haut-de-page">
+<header class="main-head">
         <nav>
-            <h1 class="logo">LOREM</h1>
-            <div class="onglets">
-                <p><a href="index.php">Accueil</a></p>
+            <h1 id="logo">LOREM</h1>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
                 <?php include "header.php"; ?>
-            </div>
+            </ul>
         </nav>
     </header>
 
