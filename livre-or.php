@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -80,7 +84,7 @@ while ($d= mysqli_fetch_array($reponse))
 <table>  
 <tr>  
 <td width=900px bgcolor=#6495ED>  
-<?php  echo '<b>'.$d[''].' </b><br/> '.$d['date'].''; ?>  
+<?php  echo '<b>'.$d['id'].' </b><br/> '.$d['date'].''; ?>  
 </td>  
 <td width=90% bgcolor=#cccccc>  
 <?php  echo $d['commentaire'] ; ?>  
@@ -89,14 +93,13 @@ while ($d= mysqli_fetch_array($reponse))
   
 </table>  
       
-      
 <?php        
 }  
   
 mysqli_close($conn); // on ferme la connexion à MySQL  
 ?>     
     <main>
-
+<p><a href="commentaire.php">Laisse ton commentaire toi aussi !</a></p>
     </main>
 </body>
 </html>

@@ -114,7 +114,37 @@ body {
   }
 
   /* PAGE COMMENTAIRE*/
+  .comments {
+      border: 1px solid;
+      padding: 30px 25px 10px 70px;
+      margin: 35px auto;
+      width: 92%;
+      background: green;
+  }
+
   .comments h3 {
-      color: black;
+      color: white;
       margin-left: 10px;
+  }
+
+  .comments textarea {
+    font-size: 14px;
+    background: #fff;
+    border: 10px solid #ddd;
+    margin-bottom: 25px;
+    padding-left:10px;
+    border-radius: 10px;
+    width: 340px;
+    height: 61px;
+  }
+
+  .comments input {
+      cursor: pointer;
+      width: 100%;
+
+  }
+
+  /*PAGE LIVRE D'OR*/
+  p a{
+      color: black;
   }

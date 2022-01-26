@@ -19,6 +19,7 @@ session_start();
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="#">Connexion</a></li>
                 <li><a href="inscription.php">Inscription</a></li>
+                <li><a href="livre-or.php">Livre d'or</a></li>
             </ul>
         </nav>
     </header>

@@ -17,7 +17,8 @@ session_start();
             <h1 id="logo">LOREM</h1>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
-                <?php include "header.php"; ?>
+                <li><a href="connexion.php">Connexion</a></li>
+                <li><a href="#">Inscription</a></li>
             </ul>
         </nav>
     </header>
