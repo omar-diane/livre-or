@@ -52,6 +52,31 @@ nav ul {
     width: 50%;
 }
 
+.articles {
+    margin-top: 20px;
+}
+
+.articles .article {
+    display: flex;
+    flex-wrap: wrap;    
+    margin-bottom: 30px;
+}
+
+.articles .article .left img {
+    height: 300px;
+    width: 500px;
+    margin-left: 20px;
+}
+
+.articles .article .right {
+    width: 50%;
+    margin-left: 20px;
+}
+
+.articles .article .right .description {
+    color: #2d2d2d;
+}
+
 /*FOOTER*/
 footer {
     background: black;
@@ -116,35 +141,42 @@ body {
   /* PAGE COMMENTAIRE*/
   .comments {
       border: 1px solid;
-      padding: 30px 25px 10px 70px;
-      margin: 35px auto;
-      width: 92%;
-      background: green;
-  }
-
-  .comments h3 {
-      color: white;
-      margin-left: 10px;
+      padding: 30px 25px 10px 25px;
+      margin: 30px auto;
+      width: 50%;
+      background: blanchedalmond;
   }
 
   .comments textarea {
     font-size: 14px;
     background: #fff;
-    border: 10px solid #ddd;
+    border: 0px solid #ddd;
     margin-bottom: 25px;
     padding-left:10px;
     border-radius: 10px;
     width: 340px;
-    height: 61px;
+    height: 80px;
   }
 
   .comments input {
-      cursor: pointer;
-      width: 100%;
+    border-radius: 5px;
+    background: green;
+    text-align: center;
+    cursor: pointer;
+    font-size: 19px;
+    width: 40%;
+    height: 40px;
+    color: black;
 
   }
 
   /*PAGE LIVRE D'OR*/
-  p a{
-      color: black;
+  #livreor th {
+      color: white;
+  }
+
+  .link {
+      color: blue;
+      text-decoration: underline;
+      margin-left: 10px;
   }

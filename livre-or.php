@@ -44,39 +44,40 @@ $d = mysqli_fetch_array($query);
 $totalDesMessages = $d['COUNT(*)'];  
   
 /*  On calcule le nombre de pages à créer , ce qu'on veut,  
-c'est afficher 20 messages dans chaque page */  
-$nombreDePages  = ceil($totalDesMessages / 20);  
+c'est afficher 10 messages dans chaque page
+La fonction ceil permet d'arrondir un nombre jusqu'au nombre entier suivant */  
+$nombreDePages  = ceil($totalDesMessages / 10);  
   
 //  on fait une boucle pour écrire les liens  des pages  
-echo"page : ";  
+echo"Page : ";  
 for ($i = 1 ; $i <= $nombreDePages ; $i++)  
-{    echo '<a href="livre-or.php?page=' . $i . '">' . $i . '</a> ';  
+{    echo '<a class="link" href="livre-or.php?page=' . $i . '">' . $i . '</a> ';  
 }  
   
-//Nous avons decidé d'utiliser un tableau pour afficher cette etiquette.  
-echo'<table width=100%>  
+//J'utilise un tableau pour afficher cette etiquette.  
+echo'<table id="livreor" width=100%>  
 <tr>  
-<th width=10% bgcolor=green> Login</th>  
-<th width=90% bgcolor=green>Commentaires</font></th>  
+<th width=10% bgcolor=black> Login </th>  
+<th width=90% bgcolor=black> Commentaires </th>  
 </tr>  
 </table>';  
   
 if (isset($_GET['page']))  
 {  
-// On récupère le numéro de la page indiqué  dans l'adresse (ex: guestbook.php?page=4)  
+// On récupère le numéro de la page indiqué  dans l'adresse (ex: livre-or.php?page=1)  
     $page = $_GET['page'];   
 }  
 else // si la variable n'existe pas alors c'est la première fois qu'on charge la page.  
 {  
-// alors on va afficher la page 1 qui va contenir les dernier messages.  
+// alors on va afficher la page 1 qui va contenir les derniers messages.  
  $page = 1;   
 }  
   
 // maintenant calcule le numéro du premier message .  
-$premierMessageAafficher = ($page - 1) * 20;  
+$premierMessageAafficher = ($page - 1) * 10;  
   
 $reponse = mysqli_query($conn,('SELECT * FROM commentaires ORDER BY id DESC LIMIT ' .   
-$premierMessageAafficher . ', ' . 20));  
+$premierMessageAafficher . ', ' . 10));  
   
 while ($d= mysqli_fetch_array($reponse))  
 {  
@@ -99,7 +100,14 @@ while ($d= mysqli_fetch_array($reponse))
 mysqli_close($conn); // on ferme la connexion à MySQL  
 ?>     
     <main>
-<p><a href="commentaire.php">Laisse ton commentaire toi aussi !</a></p>
+<?php
+
+if(isset($_SESSION["connected"])){
+      echo "<a class='link' href='commentaire.php'> Laisse ton commentaire en cliquant ici ! </a>";
+} else {
+    echo "Tu veux laisser ton commentaire ? <a class='link' href='connexion.php'> Connecte toi </a>";
+}
+?>
     </main>
 </body>
 </html>

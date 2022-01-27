@@ -54,7 +54,6 @@ session_start();
 
     <main>
     <form class="comments" action="" method="post">
-     <h3>Laisse un commentaire</h3>
     <textarea id="commentaire" name="commentaire" cols="50" rows="7"></textarea><br>
     <input type="submit" name="submit" value="Envoyer le commentaire">
         </form>

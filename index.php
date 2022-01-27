@@ -26,6 +26,31 @@ session_start();
             <h2>Welcome To China</h2>
             <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error esse quod commodi nemo sequi! Praesentium quae velit unde itaque dolorem iure! Aperiam fugiat dignissimos reprehenderit sunt provident perspiciatis autem ducimus!</h3>
         </section>
+
+        <section class="articles">
+            <div class="article">
+            <div class="left">
+                <img src="images/china2.jpg" alt="">
+            </div>
+            <div class="right">
+                <p class="description">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis laboriosam, deleniti at voluptatem accusamus aliquam quam numquam repudiandae iure iste voluptatum quis culpa molestias autem, error reiciendis minima. Odit, omnis?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis laboriosam, deleniti at voluptatem accusamus aliquam quam numquam repudiandae iure iste voluptatum quis culpa molestias autem, error reiciendis minima. Odit, omnis?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis laboriosam, deleniti at voluptatem accusamus aliquam quam numquam repudiandae iure iste voluptatum quis culpa molestias autem, error reiciendis minima. Odit, omnis?
+                </p>
+            </div>
+            <div class="left">
+                <img src="images/chine.jpg" alt="">
+            </div>
+            <div class="right">
+                <p class="description">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis laboriosam, deleniti at voluptatem accusamus aliquam quam numquam repudiandae iure iste voluptatum quis culpa molestias autem, error reiciendis minima. Odit, omnis?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis laboriosam, deleniti at voluptatem accusamus aliquam quam numquam repudiandae iure iste voluptatum quis culpa molestias autem, error reiciendis minima. Odit, omnis?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis laboriosam, deleniti at voluptatem accusamus aliquam quam numquam repudiandae iure iste voluptatum quis culpa molestias autem, error reiciendis minima. Odit, omnis?
+                </p>
+            </div>
+            </div>
+        </section>
     </main>
     <footer>
         <a href="https://github.com/omar-diane/livre-or">Github</a>
