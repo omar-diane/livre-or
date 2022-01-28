@@ -38,13 +38,13 @@ if($conn === false){
     die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
 }
 
-// On commence par compter le nombre totale des messages  
+// On commence par compter le nombre totale des commentaires  
 $query = mysqli_query($conn,('SELECT COUNT(*) FROM commentaires'));  
 $d = mysqli_fetch_array($query);  
 $totalDesMessages = $d['COUNT(*)'];  
   
 /*  On calcule le nombre de pages à créer , ce qu'on veut,  
-c'est afficher 10 messages dans chaque page
+c'est afficher 10 commentaires dans chaque page
 La fonction ceil permet d'arrondir un nombre jusqu'au nombre entier suivant */  
 $nombreDePages  = ceil($totalDesMessages / 10);  
   
@@ -76,7 +76,7 @@ else // si la variable n'existe pas alors c'est la première fois qu'on charge l
 // maintenant calcule le numéro du premier message .  
 $premierMessageAafficher = ($page - 1) * 10;  
   
-$reponse = mysqli_query($conn,('SELECT * FROM commentaires ORDER BY id DESC LIMIT ' .   
+$reponse = mysqli_query($conn,('SELECT * FROM utilisateurs, commentaires ORDER BY date DESC LIMIT ' .   
 $premierMessageAafficher . ', ' . 10));  
   
 while ($d= mysqli_fetch_array($reponse))  
@@ -85,12 +85,11 @@ while ($d= mysqli_fetch_array($reponse))
 <table>  
 <tr>  
 <td width=900px bgcolor=#6495ED>  
-<?php  echo '<b>'.$d['id'].' </b><br/> '.$d['date'].''; ?>  
+<?php  echo '<b>'.$d['login'].' </b><br/> '.$d['date'].''; ?>  
 </td>  
 <td width=90% bgcolor=#cccccc>  
 <?php  echo $d['commentaire'] ; ?>  
 </td>  
-  
   
 </table>  
       
