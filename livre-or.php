@@ -75,26 +75,26 @@ else // si la variable n'existe pas alors c'est la première fois qu'on charge l
   
 // maintenant calcule le numéro du premier message .  
 $premierMessageAafficher = ($page - 1) * 10;  
-  
-$reponse = mysqli_query($conn,('SELECT * FROM utilisateurs, commentaires ORDER BY date DESC LIMIT ' .   
-$premierMessageAafficher . ', ' . 10));  
-  
-while ($d= mysqli_fetch_array($reponse))  
-{  
-?>  
+
+// ensuite j'utilise des jointures SQL pour pouvoir associer plusieurs tables dans la même requête et afficher le login à son propre commentaire.
+$join= mysqli_query($conn,('SELECT utilisateurs.login, commentaires.id_utilisateurs,commentaires.commentaire,commentaires.date,commentaires.id FROM commentaires,utilisateurs WHERE commentaires.id_utilisateurs = utilisateurs.id ORDER BY id DESC LIMIT '.$premierMessageAafficher.',10 '));
+$res=mysqli_fetch_all($join,MYSQLI_ASSOC);
+
+?>
 <table>  
-<tr>  
-<td width=900px bgcolor=#6495ED>  
-<?php  echo '<b>'.$d['login'].' </b><br/> '.$d['date'].''; ?>  
-</td>  
-<td width=90% bgcolor=#cccccc>  
-<?php  echo $d['commentaire'] ; ?>  
-</td>  
-  
-</table>  
+<tr>
+<?php 
+for($i=0;$i<=isset($res[$i]);$i++){
+    echo '<tr><td width=900px bgcolor=#6495ED><b>'.$res[$i]['login'].'</b></td>';
+    echo '<td width=900px bgcolor=#6495ED> <b>'.$res[$i]['id'].' </b><br/> '.$res[$i]['date'].'</td>';
+    echo '<td width=90% bgcolor=#cccccc>'.$res[$i]['commentaire'].'</td>';
+}
+
+?>  
+</tr>
+</table>
       
-<?php        
-}  
+<?php          
   
 mysqli_close($conn); // on ferme la connexion à MySQL  
 ?>     
